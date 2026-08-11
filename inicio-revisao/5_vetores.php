@@ -1,28 +1,26 @@
 <?php
 
 // Vetor (array simples)
-$frutas = [ "maça", "banana", "uva"];
+$frutas = ["Maça", "Banana", "Uva"];
 
-// Exibindo (usando laços)
-foreach ($frutas as $indices => $fruta) {
-    echo "Posição $indices: $fruta<br>";
+// Exibindo (Usando laço)
+foreach ($frutas as $indice => $fruta) {
+    echo "Posição $indice: $fruta<br>";
 }
 
 // Matriz (array completo "Linhas e colunas")
 $matriz = [
-    ["Max Verstappen", "Lando Norris", "Oscar piastri"],
-    ["Charles Leclerc, "Lewis Hamilton", "George Russel"],
+    ["Max Vesrtappen", "Lando Norris","Oscar piastri"],
+    ["Charles Leclerc", "Lewis Hamilton","George Russel"],
     ["Fernando Alonso", "Carlos Sainz", "Ayrton Senna"]
-]
-
+];
 
 // Exibindo nome dos pilotos
-
 echo "<br><br>";
-echo "Melhores pilotos de F1: <br><br>";
+echo "Melhores pilotos da F1: <br><br>";
 foreach ($matriz as $linha) {
-foreach ($linha as $piloto) {
-echo $piloto . " | ";
-}
-echo "<br>";
+    foreach ($linha as $piloto) {
+        echo $piloto . " | ";
+    }
+    echo "<br>";
 }
