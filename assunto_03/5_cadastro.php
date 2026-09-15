@@ -40,9 +40,19 @@
         // Fecha o arquivo 
         fclose($arquivo);
 
+        // Redireciona para a própria pagian após o cadastro
+        header('Location:' .$_SERVER['PHP_SELF']. '?sucesso=1');
+        exit;
+    }
+
+if (isset($_GET['sucesso'])) {
         // Mensagem de sucesso (feedback visual para o usuario)
         echo"<p>Usuario cadastrado com sucesso!</p>";
-    }
+
+        // Atualiza a pagina após 5 segundos (Força a mensagem a sumir)
+        header('refresh:5, url=' . $_SERVER['PHP_SELF']);
+
+}
     ?>
     
 </body>
